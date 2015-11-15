@@ -1,0 +1,66 @@
+//
+// Prefix header for all source files of the 'BoandaProject' target in the 'BoandaProject' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#ifdef DEBUG
+#define DLog(...) NSLog(@"%s %@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+
+#else
+#define DLog(...) do { } while (0)
+#endif
+
+#define kNETLAST_MESSAGE @"已经是最后一页"
+#define kNETDATA_ERROR_MESSAGE @"查询无数据"
+#define kNETWORK_ERROR_MESSAGE @"获取数据失败，请稍后重试"
+
+//数据同步完毕
+#define kNotifyDataSyncFininshed @"kNotifyDataSyncFinished"
+#define kNotifyDataSyncFailed    @"kNotifyDataSyncFailed"
+
+//菜单数据同步完毕
+#define kLastSyncDate @"LastSyncDate"
+#define kLoadHbsc @"kLoadHbsc"
+#define kLastVersion @"kLastVersion" //上一个版本
+#define kLoginSyncDate @"LoginSyncDate"
+
+#define LIGHT_BLUE_UICOLOR [UIColor colorWithRed:231.0/255 green:240.0/255 blue:236.0/255 alpha:1]
+
+#define ONE_PAGE_SIZE 30
+
+//登录返回
+#define KUserDepartment @"KUserDepartment"
+
+//如果定义此宏，表示记录请求的webservice，否则不记录
+#define Save_OperateLog 
+
+#define kLaiWen_Type_Tag @"43000000002" //来文登记
+#define kFaWen_Type_Tag  @"44030300004" //发文登记
+#define kNeiBu_WenYin_Type_Tag @"43000000012" //文印申请内部事项
+#define kNeiBu_CaiGou_Type_Tag @"43000000010" //采购申请内部事项
+#define kNeiBu_YongChe_Type_Tag @"43000000011" //用车申请内部事项
+#define kNeiBu_ChuChai_Type_Tag @"5eb534db-e207-4a80-b035-e92a854278f6" //内部事项出差申请
+#define kNeiBu_QingJia_Type_Tag @"8ef70a5b-73db-4e68-b70a-9d0871de3734" //内部事项请假申请
+#define kNeiBu_YongZhang_Type_Tag @"45000000003" //内部事项用章申请
+#define kNeiBu_QiTa_Type_Tag @"45000000004" //内部事项
+#define kNotice_Type_Tag @"f81e305a-2516-43c9-8002-b8801a087b0c" //通知公告
+
+//检查更新地址
+#define UpdateUrl @"http://222.92.101.82:8080/ipad/version.json"
+
+//更新包下载地址
+#define DownloadUrl @"http://222.92.101.82:8080/ipad/updateapp.html"
+
+#define KTYPESTR @"typeStr"
+#define KUserName @"KUserName"
+#define KUserPassword @"KUserPassword"
